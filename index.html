@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+    <div class="form-container">
+        <div class="form-section">
+            <div class="form-section-item">
+                <h3>Client details</h3>
+                <div class="form-section-row">
+                    <input type="text" name="clientFirstName" placeholder="First name" required>
+                    <input type="text" name="clientLastName" placeholder="Last name" required>
+                </div>
+                <input type="number" name="clientPhone" placeholder="phone" required>
+                <input type="email" name="clientEmail" placeholder="Email (optional)">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-item">
+                <h3>Job type</h3>
+                <select name="jobType" required>
+                    <option class="opacity" value="" disabled selected hidden>Job type</option>
+                    <option value="Recall Job">Recall Job</option>
+                </select>
+                <select name="jobSource" required>
+                    <option class="opacity" value="" disabled selected hidden>Job Source</option>
+                    <option value="GL Pinellas">GL Pinellas</option>
+                </select>
+                <textarea name="jobNote" placeholder="Job description (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-item">
+                <h3>Service location</h3>
+                <input type="text" name="serviceLocation" placeholder="Address" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+                <div class="form-section-row">
+                    <input type="text" name="zip" placeholder="Zip code" required>
+                    <select name="area" required>
+                        <option class="opacity" value="" disabled selected hidden>Area</option>
+                        <option value="Tampa">Tampa</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-item">
+                <h3>Scheduled</h3>
+                <input lang="en" type="date" name="scheduleDate" required>
+                <div class="form-section-row">
+                    <select name="startTime" required>
+                        <option class="opacity" value="" disabled selected hidden>Start time</option>
+                        <option value="08:00">08:00</option>
+                    </select>
+                    <select name="endTime" required>
+                        <option class="opacity" value="" disabled selected hidden>End time</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                </div>
+                <select name="technician" required>
+                    <option class="opacity" value="" selected hidden>Select technician</option>
+                    <option value="Timur Yussupov">Timur Yussupov</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="requestbtn"  id="requestSentButton">Create job</button>
+        <button class="savebtn" type="button" onclick="saveInfo()">Save info</button>
+    </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
